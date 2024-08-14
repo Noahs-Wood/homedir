@@ -123,16 +123,14 @@ cfg_if! {
         use windows::my_home as my_home_imp;
         use windows::GetHomeError as GetHomeErrorImp;
         use windows::UserIdentifier as UserIdentifierImp;
-    } else if #[cfg(unix)] {
+    } else {
         /// Contains the implementation of the crate for Unix systems.
         pub mod unix;
         use unix::home as home_imp;
         use unix::my_home as my_home_imp;
         use unix::GetHomeError as GetHomeErrorImp;
         use unix::UserIdentifier as UserIdentifierImp;
-    } else {
-        compile_error!("this crate only supports windows and unix systems");
-    }
+    } 
 }
 
 /// This structure represents a user's identifier.
