@@ -16,10 +16,6 @@ repository = "https://github.com/ljtpetersen/homedir"
 keywords = ["home", "directory", "utility", "lightweight", "profile"]
 categories = ["config", "filesystem"]
 
-# Unix Dependencies
-[dependencies]
-nix = { version = "0.26.2", features = ["user"] }
-
 # Windows Dependencies
 [target.'cfg(windows)'.dependencies]
 widestring = "1.0.2"
@@ -36,6 +32,7 @@ windows = { version = "0.57.0", features = [
 
 [dependencies]
 cfg-if = "1.0.0"
+nix = { version = "0.26.2", features = ["user"] }
 
 [features]
 default = ["windows-coinitialize"]
