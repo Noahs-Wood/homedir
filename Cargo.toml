@@ -17,9 +17,7 @@ keywords = ["home", "directory", "utility", "lightweight", "profile"]
 categories = ["config", "filesystem"]
 
 # Unix Dependencies
-[target.'cfg(unix)'.dependencies]
-# I debated rolling with my own implementation, but it would probably
-# just be a copy of the implementation in here, so I didn't.
+[dependencies]
 nix = { version = "0.26.2", features = ["user"] }
 
 # Windows Dependencies
